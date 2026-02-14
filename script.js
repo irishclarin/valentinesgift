@@ -185,7 +185,7 @@ styleBtn.addEventListener("click", () => {
   styleIndex = (styleIndex + 1) % BOUQUET_STYLES.length;
   const style = BOUQUET_STYLES[styleIndex];
   buildBouquet(style);
-  setTag(`Bouquet style: ${style.name} ✨`);
+  setTag(`Bouquet style: ${style.name} `);
   burstSparkle(styleBtn.getBoundingClientRect());
 });
 
@@ -193,7 +193,7 @@ togglePetalsBtn.addEventListener("click", () => {
   petalsOn = !petalsOn;
   togglePetalsBtn.textContent = `Petals: ${petalsOn ? "On" : "Off"}`;
   togglePetalsBtn.setAttribute("aria-pressed", String(petalsOn));
-  setTag(petalsOn ? "Petals are floating ✨" : "Petals paused 🌙");
+  setTag(petalsOn ? "Petals are floating " : "Petals paused ");
 });
 
 
@@ -216,7 +216,7 @@ copyNoteBtn.addEventListener("click", async () => {
     setTag("Copied your note ✨");
     burstSparkle(copyNoteBtn.getBoundingClientRect());
   }catch(e){
-    setTag("Copy blocked by browser—select text manually 💗");
+    setTag("Copy blocked by browser—select text manually");
   }
 });
 
@@ -274,7 +274,7 @@ downloadBtn.addEventListener("click", () => {
   ctx.globalAlpha = .85;
   ctx.font = "800 34px ui-rounded, system-ui, -apple-system, Segoe UI, Arial";
   ctx.fillStyle = "#2b2b2b";
-  ctx.fillText("— from Bubu 💗", 110, 1260);
+  ctx.fillText("— from Tel", 110, 1260);
   ctx.globalAlpha = 1;
 
   const a = document.createElement("a");
