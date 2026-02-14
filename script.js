@@ -213,7 +213,7 @@ copyNoteBtn.addEventListener("click", async () => {
   const text = `To: ${FIXED_NAME}\n${FIXED_MESSAGE}\n\n${noteText.textContent.trim()}`;
   try{
     await navigator.clipboard.writeText(text);
-    setTag("Copied your note ✨");
+    setTag("Copied your note");
     burstSparkle(copyNoteBtn.getBoundingClientRect());
   }catch(e){
     setTag("Copy blocked by browser—select text manually");
@@ -284,7 +284,7 @@ downloadBtn.addEventListener("click", () => {
   a.click();
   a.remove();
 
-  setTag("Downloaded card PNG ✨");
+  setTag("Downloaded card PNG");
   burstSparkle(downloadBtn.getBoundingClientRect());
 });
 
